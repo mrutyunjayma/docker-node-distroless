@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOpsPro — DevOps & Cloud Engineering</title>
+  <meta name="description" content="DevOpsPro — CI/CD, IaC, Observability, Cloud migrations and Site Reliability Engineering." />
+
+  <style>
+    /* Basic Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      line-height:1.45;color:#0f172a;background:linear-gradient(180deg,#fbfdff 0%, #f4f7fb 100%);
+      display:flex;flex-direction:column;min-height:100vh;
+      /* subtle top & bottom borders */
+      border-top:6px solid #0ea5a4;border-bottom:6px solid #0ea5a4;
+    }
+
+    .container{width:min(1100px,94%);margin:0 auto}
+
+    /* Header */
+    header{padding:22px 0;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;color:#06202a}
+    .logo .mark{width:40px;height:40px;display:grid;place-items:center;background:#0ea5a4;color:#fff;border-radius:8px;font-weight:800}
+
+    nav a{margin-left:18px;color:#0f172a;text-decoration:none;font-weight:600}
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:#0ea5a4;color:#05323a;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:48px 0}
+    .eyebrow{display:inline-block;background:#e6fffb;color:#064e47;padding:6px 10px;border-radius:999px;font-weight:700;margin-bottom:12px}
+    h1{font-size:2.1rem;color:#06202a;line-height:1.05;margin-bottom:12px}
+    p.lead{color:#334155;margin-bottom:20px}
+    .hero-cta{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:#06202a;color:#fff}
+    .btn-ghost{border:1px solid #cbd5e1;color:#06202a;background:transparent}
+
+    /* Feature cards */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(9,30,66,0.06);border:1px solid rgba(9,30,66,0.04)}
+    .card h3{font-size:1rem;margin-bottom:8px}
+    .card p{font-size:0.9rem;color:#475569}
+
+    /* Right column box */
+    .panel{background:linear-gradient(180deg,#f8ffff,#ffffff);padding:20px;border-radius:12px;border:1px solid rgba(14,165,164,0.08)}
+    .panel h4{margin-bottom:8px}
+    .metrics{display:flex;gap:12px;margin-top:8px}
+    .metric{flex:1;background:#fff;padding:12px;border-radius:10px;text-align:center}
+    .metric strong{display:block;font-size:1.2rem}
+
+    /* Services / stack */
+    section{padding:56px 0}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .tech{background:#fff;padding:14px;border-radius:10px;text-align:center;border:1px solid rgba(2,6,23,0.04)}
+    .tech small{display:block;margin-top:8px;color:#475569}
+
+    /* CTA strip */
+    .cta-strip{background:#06202a;color:#fff;padding:28px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+    /* Footer */
+    footer{padding:28px 0;color:#475569}
+
+    /* Responsive */
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      nav a{display:none}
+      .features{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:1fr}
+      h1{font-size:1.6rem}
+    }
+
+    /* small utilities */
+    .muted{color:#64748b}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:0.85rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><div class="mark">D</div><div>
+        <div>DevOpsPro</div>
+        <div style="font-size:12px;color:#475569">Cloud · CI/CD · SRE</div>
+      </div></div>
+
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact" class="cta">Get Started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Trusted by engineering teams</span>
+          <h1>Ship faster — safely. Reliable DevOps & Cloud engineering.</h1>
+          <p class="lead">We design CI/CD pipelines, automate infra with Terraform, improve reliability with monitoring and SRE best practices — so your team focuses on product, not firefighting.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Book a Free Consult</a>
+            <a class="btn btn-ghost" href="#features">See Features</a>
+          </div>
+
+          <div class="features" style="margin-top:22px">
+            <div class="card">
+              <h3>CI / CD Automation</h3>
+              <p>Automated pipelines (GitHub Actions, Jenkins, GitLab CI) with testing and rollbacks.</p>
+            </div>
+            <div class="card">
+              <h3>Infrastructure as Code</h3>
+              <p>Repeatable IaC using Terraform & CloudFormation for multi-cloud portability.</p>
+            </div>
+            <div class="card">
+              <h3>Monitoring & SRE</h3>
+              <p>Alerting, dashboards, runbooks and SLOs to keep services healthy and reliable.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <h4>Quick stats</h4>
+          <p class="muted">Typical outcomes within 90 — 120 days</p>
+          <div class="metrics">
+            <div class="metric"><strong>70%</strong><span class="muted">Deployment time ↓</span></div>
+            <div class="metric"><strong>50%</strong><span class="muted">Incidents ↓</span></div>
+            <div class="metric"><strong>4x</strong><span class="muted">Release frequency ↑</span></div>
+          </div>
+
+          <div style="margin-top:16px">
+            <h4 style="margin-bottom:8px">Case study</h4>
+            <p class="muted" style="font-size:0.95rem">Migrated monolith to containers and implemented CI/CD — reduced lead time from commit to production by 4x for a SaaS product.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="services">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px">
+          <div>
+            <h2 style="font-size:1.3rem">Our services</h2>
+            <p class="muted">End-to-end DevOps: from strategy and automation to 24/7 SRE support.</p>
+          </div>
+          <div class="pill">Customizable engagements</div>
+        </div>
+
+        <div class="services-grid">
+          <div class="card">
+            <h3>Cloud Migration</h3>
+            <p>Migrate workloads to AWS / Azure / GCP with minimal downtime and cost optimization.</p>
+          </div>
+          <div class="card">
+            <h3>Containerization</h3>
+            <p>Docker, Kubernetes design and operational runbooks for production scale.</p>
+          </div>
+          <div class="card">
+            <h3>Security & Compliance</h3>
+            <p>Shift-left security, IAM hardening, policy-as-code and audit-ready controls.</p>
+          </div>
+          <div class="card">
+            <h3>Managed SRE</h3>
+            <p>On-call, incident response, SLO/SLA setup and chaos engineering exercises.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px">
+          <div>
+            <h2 style="font-size:1.3rem">Tech stack we love</h2>
+            <p class="muted">We design solutions using battle-tested tools and cloud native patterns.</p>
+          </div>
+          <div class="muted">CI / CD · Terraform · Kubernetes · Prometheus · Grafana · Docker</div>
+        </div>
+
+        <div class="services-grid">
+          <div class="tech"><strong>Terraform</strong><small>IaC</small></div>
+          <div class="tech"><strong>Kubernetes</strong><small>Orchestration</small></div>
+          <div class="tech"><strong>Docker</strong><small>Containers</small></div>
+          <div class="tech"><strong>Prometheus</strong><small>Monitoring</small></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start">
+          <div>
+            <h2>Start a project</h2>
+            <p class="muted">Tell us briefly about your goals and we'll propose a 30/60/90 day plan.</p>
+
+            <form style="margin-top:14px;display:grid;gap:10px" onsubmit="event.preventDefault();alert('Thanks! We\'ll get back to you.');">
+              <input required placeholder="Your name" style="padding:12px;border-radius:8px;border:1px solid #e6eef6" />
+              <input required type="email" placeholder="Email" style="padding:12px;border-radius:8px;border:1px solid #e6eef6" />
+              <textarea required placeholder="Brief description of project" rows="5" style="padding:12px;border-radius:8px;border:1px solid #e6eef6"></textarea>
+              <div style="display:flex;gap:8px">
+                <button class="btn btn-primary" type="submit">Request proposal</button>
+                <a class="btn btn-ghost" href="#">Schedule call</a>
+              </div>
+            </form>
+          </div>
+
+          <aside style="background:#fff;padding:18px;border-radius:12px;border:1px solid rgba(2,6,23,0.04)">
+            <h4>Contact</h4>
+            <p class="muted">hello@devopspro.example · +91 98765 43210</p>
+            <div style="margin-top:12px">
+              <strong>Office</strong>
+              <p class="muted">Bengaluru, India</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section style="margin-bottom:40px">
+        <div class="cta-strip">
+          <div>
+            <h3 style="margin-bottom:6px">Ready to reduce risk & ship faster?</h3>
+            <p class="muted">Book a free roadmap session and get a tailored 90‑day plan.</p>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="#contact">Book free session</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="muted">© DevOpsPro — Built with care</div>
+        <div class="muted">Terms · Privacy</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
